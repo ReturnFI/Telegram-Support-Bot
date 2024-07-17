@@ -75,7 +75,7 @@ def join(message):
         if message.is_topic_message:
             thread_id = message.message_thread_id
             join_url = f"tg://resolve?domain={bot_username}&start={group_id}_{thread_id}"
-            bot.send_message(message.chat.id, f"Use the following link to join this group and topic:\n\n{join_url}")
+            bot.send_message(message.chat.id, f"Use the following link to join this group and topic:\n\n{join_url}", message_thread_id=thread_id)
         else:
             bot.send_message(message.chat.id, "This command should be used within a thread in the group to create a join link for that specific thread.")
     
