@@ -43,7 +43,7 @@ def handle_message(message):
                 reply_to_message_id=thread_id
             )
             user_messages[message.chat.id]['group_message_id'] = forwarded_message.message_id
-            bot.send_message(message.chat.id, f"Your photo with caption for thread ID '{thread_id}' has been sent. Please wait for Hiddify Team's response.")
+            bot.send_message(message.chat.id, f"Your photo with caption for thread ID '{thread_id}' has been sent. Please wait for Support Team's response.")
     
         elif message.text:
             if user_data['group_message_id'] is None:
@@ -53,7 +53,7 @@ def handle_message(message):
                     reply_to_message_id=thread_id
                 )
                 user_messages[message.chat.id]['group_message_id'] = forwarded_message.message_id
-                bot.send_message(message.chat.id, f"Your message for thread ID '{thread_id}' has been sent. Please wait for Hiddify Team's response.")
+                bot.send_message(message.chat.id, f"Your message for thread ID '{thread_id}' has been sent. Please wait for Support Team's response.")
             
             else:
                 forwarded_message = bot.send_message(
@@ -94,7 +94,7 @@ def handle_group_reply(message):
         for user_id, user_data in user_messages.items():
             if user_data.get('group_message_id') == replied_message_id:
                 reply_text = message.text.split('/welcome ', 1)[1]
-                bot.send_message(user_id, f"Hiddify Team:\n\n{reply_text}")
+                bot.send_message(user_id, Support Team:\n\n{reply_text}")
                 break
     
     except Exception as e:
