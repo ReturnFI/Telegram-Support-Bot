@@ -94,7 +94,7 @@ def handle_group_reply(message):
         for user_id, user_data in user_messages.items():
             if user_data.get('group_message_id') == replied_message_id:
                 reply_text = message.text.split('/welcome ', 1)[1]
-                bot.send_message(user_id, Support Team:\n\n{reply_text}")
+                bot.send_message(user_id, f"Support Team:\n\n{reply_text}")
                 break
     
     except Exception as e:
