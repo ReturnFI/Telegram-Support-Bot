@@ -18,7 +18,7 @@ This is a Telegram bot designed to facilitate communication between users and a 
 1. Clone the repository:
 ``` shell
 git clone https://github.com/ReturnFI/Telegram-Support-Bot.git
-cd telegram-support-bot
+cd Telegram-Support-Bot
 ```
 
 2. Install the required libraries:
