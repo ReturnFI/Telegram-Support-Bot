@@ -26,7 +26,7 @@ cd Telegram-Support-Bot
 pip install pyTelegramBotAPI python-dotenv
 ```
 
-3. Create a .env file in the root directory of the project and add your Telegram bot token:
+3. Create a `.env` file in the root directory of the project and add your Telegram bot token:
 ```
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 ```
